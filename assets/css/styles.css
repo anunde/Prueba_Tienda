@@ -22,6 +22,14 @@ a:hover {
 	color: #555555;
 }
 
+.alert_green {
+	color: green;
+}
+
+.alert_red {
+	color: red;
+}
+
 #container {
 	width: 80%;
 	margin: 0 auto;
@@ -114,6 +122,17 @@ a:hover {
 	background-color: white;
 }
 
+#content strong {
+	display: block;
+	width: 80%;
+	margin: 0 auto;
+}
+
+#content form {
+	display: block;
+	width: 80%;
+	margin: 0 auto;
+}
 
 /*BARRA LATERAL*/
 #lateral {

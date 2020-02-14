@@ -30,6 +30,18 @@ a:hover {
 	color: red;
 }
 
+table {
+	margin: 0 auto;
+	text-align: center; 
+	width: 80%;
+	border: 1px solid #555;
+}
+
+td {
+	border-top: 1px solid #ccc;
+	padding: 5px;
+}
+
 #container {
 	width: 80%;
 	margin: 0 auto;
@@ -223,8 +235,13 @@ button, .button {
 }
 
 .button {
+	margin-left: 77px;
+	margin-bottom: 20px;
+	width: 140px;
+	display: block;
+	text-align: center;
 	background: #33ae3d;
-	color: white;
+	color: white!important;
 	text-decoration: none;
 }
 

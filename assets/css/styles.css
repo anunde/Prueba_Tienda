@@ -42,6 +42,10 @@ td {
 	padding: 5px;
 }
 
+.thumb {
+	width: 100px;
+}
+
 #container {
 	width: 80%;
 	margin: 0 auto;
@@ -189,11 +193,17 @@ td {
 }
 
 /* FORMS */
+.form_container {
+	width: 50%;
+	margin: 0 auto;
+}
+
 label,
 input[type="text"],
 input[type="password"],
 input[type="email"],
-select {
+input[type="number"],
+select, textarea {
 	display: block;
 	width: 95%;
 	margin-top: 2px;
@@ -203,7 +213,8 @@ select {
 input[type="text"],
 input[type="password"],
 input[type="email"],
-select {
+input[type="number"],
+select, textarea {
 	border: 1px solid #c9c9c9;
 	box-shadow: 0px 0px 2px #ccc inset;
 	background: white;
@@ -243,6 +254,16 @@ button, .button {
 	background: #33ae3d;
 	color: white!important;
 	text-decoration: none;
+}
+
+.button-gestion {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.button-red {
+	background: red;
+	border: 1px solid #cf1717;
 }
 
 label,

@@ -34,7 +34,7 @@ table {
 	margin: 0 auto;
 	text-align: center; 
 	width: 80%;
-	border: 1px solid #555;
+	border-bottom: : 1px solid #ccc;
 }
 
 td {
@@ -379,6 +379,12 @@ button {
 	text-align: center;
 	margin-left: 0;
  }
+
+ .img_carrito {
+ 	height: 40px;
+ 	display: block;
+ 	margin: 10px auto;
+ }
 /* FOOTER */
 
 #footer {
@@ -389,4 +395,25 @@ button {
 	color: white;
 	background: #222222;
 	border-top: 4px solid #01b1ea;
+}
+
+/*CARRITO*/
+.total_carrito{
+	width: 380px;
+	float: right;
+	margin-right: 85px;
+	margin-top: 60px;
+}
+
+.total_carrito h3{
+	display: block;
+	float: left;
+	margin-top: 5px;
+}
+
+
+.button-pedido {
+	display: block;
+	float: right;
+	width: 100px;
 }

@@ -99,6 +99,22 @@ class Pedido{
 		return $pedido->fetch_object();
 	}
 
+	public function getOneByUser() {
+		$pedido = $this->db->query("SELECT p.id, p.coste FROM pedidos p INNER JOIN lineas_pedidos lp ON p.id = lp.pedido_id WHERE p.usuario_id = {$this->getUsuario_id()} ORDER BY id DESC LIMIT 1;");
+		return $pedido->fetch_object();
+	}
+
+	public function getAllByUser() {
+		$pedido = $this->db->query("SELECT * FROM pedidos WHERE usuario_id = {$this->getUsuario_id()} ORDER BY id DESC;");
+		return $pedido;
+	}
+
+	public function getByPedido($id) {
+		$sql = "SELECT pr.*, lp.unidades FROM productos pr INNER JOIN lineas_pedidos lp ON pr.id = lp.producto_id WHERE lp.pedido_id = $id;";
+		$productos = $this->db->query($sql);
+		return $productos;
+	}
+
 	public function save() {
 		$sql = "INSERT INTO pedidos VALUES(NULL, {$this->getUsuario_id()}, '{$this->getProvincia()}', '{$this->getLocalidad()}', '{$this->getDireccion()}', {$this->getCoste()}, 'confirm', CURDATE(), CURTIME());";
 		$save = $this->db->query($sql);
@@ -127,6 +143,18 @@ class Pedido{
 			$result = true;
 		}
 		return $result;
+	}
 
+	public function edit() {
+		$sql = "UPDATE pedidos SET estado = '{$this->getEstado()}' WHERE id = {$this->getId()};";
+
+		$save = $this->db->query($sql);
+
+		$result = false;
+		if ($save) {
+			$result = true;
+		}
+
+		return $result;
 	}
 }
